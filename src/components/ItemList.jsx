@@ -1,10 +1,12 @@
 import React from "react";
 import Item from "./Item";
 
-function ItemList({ items }) {
+function ItemList({ products }) {
   return (
-    <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-      {items.map(item => <Item key={item.id} item={item} />)}
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+      {products.map((product) => (
+        <Item key={product.id} product={product} />
+      ))}
     </div>
   );
 }
